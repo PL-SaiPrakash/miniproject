@@ -27,14 +27,7 @@ app.use('/', productRoutes);
 app.use('/', userRoutes);
 
 // Use login module
-app.get("/",(req,res)=>{
-    
-const absolutePath = path.join(__dirname, 'login.html')
-console.log(absolutePath)
 
-res.sendFile(absolutePath)
-
-})
 
 // Connect to MongoDB
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, dbName: url.dbName })
